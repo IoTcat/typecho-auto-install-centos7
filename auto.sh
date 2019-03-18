@@ -52,6 +52,7 @@ echo
 echo "*****************************************************************"
 echo use mysql
 echo "UPDATE user SET Password = '你的密码' WHERE User = 'root';"
+echo "create database typecho;"
 echo quit
 echo "*****************************************************************"
 echo 
