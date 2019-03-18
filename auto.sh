@@ -4,7 +4,7 @@ cat /etc/redhat-release
 #read -t 300 -p "请输入你的域名：" domain
 #read -t 300 -p "请输入你的邮箱(用于申请ssl证书)：" email
 #read -t 300 -p "请设定你的数据库root密码(务必牢记)：" dbpasswd
-#yum -y update
+yum -y update
 yum -y install nginx
 systemctl start nginx
 systemctl enable nginx
@@ -47,10 +47,13 @@ firewall-cmd --reload
 echo Auto Install finished!!
 echo 安装完成！！
 echo 请开始设置你的数据库
-echo 请输入以下内容设置数据库root密码
+echo 请输入以下内容设置数据库root密码 
 echo 
+echo *****************************************************************
 echo use mysql
 echo "UPDATE user SET Password = '你的密码' WHERE User = 'root';"
+echo quit
+echo *****************************************************************
 echo 
 mysql -uroot
 echo 自动安装程序运行完成！！
