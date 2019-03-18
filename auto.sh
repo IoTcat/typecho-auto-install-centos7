@@ -36,4 +36,4 @@ systemctl start firewalld
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --reload
-echo 安装脚本执行完毕~
+echo Auto Install finished!!
