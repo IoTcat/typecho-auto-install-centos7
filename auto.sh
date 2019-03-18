@@ -15,11 +15,11 @@ yum -y install php72w-fpm
 systemctl restart php-fpm
 systemctl enable php-fpm
 cd /etc/nginx
-wget https://yimian-setup.obs.myhwclouds.com/std-conf/nginx.conf
+wget -O nginx.conf https://yimian-setup.obs.myhwclouds.com/std-conf/nginx.conf
 cd /etc/php-fpm.d
-wget https://yimian-setup.obs.myhwclouds.com/std-conf/www.conf
+wget -O www.conf https://yimian-setup.obs.myhwclouds.com/std-conf/www.conf
 cd /etc
-wget https://yimian-setup.obs.myhwclouds.com/std-conf/my.cnf
+wget -O my.cnf https://yimian-setup.obs.myhwclouds.com/std-conf/my.cnf
 systemctl restart mysqld
 yum -y install php72w-mysql
 systemctl restart nginx
