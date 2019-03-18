@@ -29,4 +29,11 @@ wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz
 tar -xvf 1.1-17.10.30-release.tar.gz
 mv build www
 systemctl restart nginx
+cd /etc/selinux
+wget https://yimian-setup.obs.myhwclouds.com/std-conf/config -O config
+setenforce 0
+systemctl start firewalld
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=443/tcp --permanent
+firewall-cmd --reload
 echo 安装脚本执行完毕~
