@@ -29,3 +29,4 @@ wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz
 tar -xvf 1.1-17.10.30-release.tar.gz
 mv build www
 systemctl restart nginx
+echo 安装脚本执行完毕~
