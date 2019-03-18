@@ -36,6 +36,7 @@ cd /home
 wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz
 tar -xvf 1.1-17.10.30-release.tar.gz
 mv build www
+chmod 777 -R www
 systemctl restart nginx
 cd /etc/selinux
 wget https://yimian-setup.obs.myhwclouds.com/std-conf/config -O config
