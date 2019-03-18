@@ -50,7 +50,7 @@ echo 请开始设置你的数据库
 echo 请输入以下内容设置数据库root密码
 echo 
 echo use mysql
-echo UPDATE user SET Password = '你的密码' WHERE User = 'root';
+echo "UPDATE user SET Password = '你的密码' WHERE User = 'root';"
 echo 
 mysql -uroot
 echo 自动安装程序允许完成！！
