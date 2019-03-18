@@ -20,7 +20,7 @@ systemctl restart php-fpm
 systemctl enable php-fpm
 cd /etc/nginx
 wget https://yimian-setup.obs.myhwclouds.com/std-conf/nginx.conf -O nginx.conf
-sed 's/your_domain/$domain/g' nginx.conf
+#sed 's/your_domain/$domain/g' nginx.conf
 #yum install -y epel-release
 #yum install -y certbot
 #certbot certonly --webroot -w /opt/www/$domain -d $domain -m $email --agree-tos
