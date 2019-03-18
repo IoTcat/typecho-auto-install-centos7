@@ -1,8 +1,8 @@
 #!/bin/bash
 echo Detecting system version..
 cat /etc/redhat-release
-read -t 300 -p "请输入你的域名：" domain
-read -t 300 -p "请输入你的邮箱(用于申请ssl证书)：" email
+#read -t 300 -p "请输入你的域名：" domain
+#read -t 300 -p "请输入你的邮箱(用于申请ssl证书)：" email
 read -t 300 -p "请设定你的数据库root密码(务必牢记)：" dbpasswd
 #yum -y update
 yum -y install nginx
@@ -21,9 +21,9 @@ systemctl enable php-fpm
 cd /etc/nginx
 wget https://yimian-setup.obs.myhwclouds.com/std-conf/nginx.conf -O nginx.conf
 sed 's/your_domain/$domain/g' nginx.conf
-yum install -y epel-release
-yum install -y certbot
-certbot certonly --webroot -w /opt/www/$domain -d $domain -m $email --agree-tos
+#yum install -y epel-release
+#yum install -y certbot
+#certbot certonly --webroot -w /opt/www/$domain -d $domain -m $email --agree-tos
 cd /etc/php-fpm.d
 wget https://yimian-setup.obs.myhwclouds.com/std-conf/www.conf -O www.conf
 cd /etc
