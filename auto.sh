@@ -53,5 +53,5 @@ echo use mysql
 echo "UPDATE user SET Password = '你的密码' WHERE User = 'root';"
 echo 
 mysql -uroot
-echo 自动安装程序允许完成！！
+echo 自动安装程序运行完成！！
 echo 请使用http://你的服务器ip 访问typecho
