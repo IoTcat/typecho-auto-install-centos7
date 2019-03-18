@@ -3,7 +3,7 @@ echo Detecting system version..
 cat /etc/redhat-release
 #read -t 300 -p "请输入你的域名：" domain
 #read -t 300 -p "请输入你的邮箱(用于申请ssl证书)：" email
-read -t 300 -p "请设定你的数据库root密码(务必牢记)：" dbpasswd
+#read -t 300 -p "请设定你的数据库root密码(务必牢记)：" dbpasswd
 #yum -y update
 yum -y install nginx
 systemctl start nginx
@@ -45,3 +45,11 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --reload
 echo Auto Install finished!!
+echo 安装完成！！
+echo 请开始设置你的数据库
+echo 请输入以下内容设置数据库root密码
+echo use mysql
+echo UPDATE user SET Password = '你的密码' WHERE User = 'root';
+mysql -uroot
+echo 自动安装程序允许完成！！
+echo 请使用http://你的服务器ip 访问typecho
