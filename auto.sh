@@ -15,13 +15,13 @@ wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum -y install mysql-community-server
 systemctl restart mysqld
-yum install epel-release
-yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-yum install yum-utils
+yum -y install epel-release
+yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum -y install yum-utils
 yum-config-manager --enable remi-php72
-yum update
-yum install php72
-yum install php72-php-fpm php72-php-gd php72-php-json php72-php-mbstring php72-php-mysqlnd php72-php-xml php72-php-xmlrpc php72-php-opcache
+yum -y update
+yum -y install php72
+yum -y install php72-php-fpm php72-php-gd php72-php-json php72-php-mbstring php72-php-mysqlnd php72-php-xml php72-php-xmlrpc php72-php-opcache
 systemctl enable php72-php-fpm.service
 systemctl start php72-php-fpm.service
 ##yum -y install php72w-fpm
